@@ -1,14 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile fragment" />
+        <FrameLayout
+            android:id="@+id/profile_header_container"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:translationZ="-2dp"
+            android:background="@drawable/card_view_profile"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_header_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/profile"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_leaderboard_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintBottom_toBottomOf="@id/tv_header_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_header_profile"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <FrameLayout
+            android:id="@+id/student_profiler_card_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-160dp"
+            android:layout_marginHorizontal="40dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_header_container">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:translationZ="2dp"
+                            android:layout_marginBottom="-95dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            android:src="@drawable/ilu_default_profile_picture"/>
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+                            app:layout_constraintStart_toStartOf="@id/view_separator"
+                            app:layout_constraintEnd_toEndOf="@id/view_separator"
+                            android:text="Yuqi Song"/>
+
+                        <View
+                            android:id="@+id/view_separator"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:background="@color/soft_light_gray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+                        <TextView
+                            android:id="@+id/tv_xp_points"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="@id/view_separator"
+                            app:layout_constraintStart_toStartOf="@id/view_separator"
+                            app:layout_constraintTop_toBottomOf="@+id/view_separator"
+                            android:text="Expert" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_check_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/check_in"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/student_profiler_card_container"/>
+
+        <TextView
+            android:id="@+id/tv_check_in_count_greet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_check_in"
+            app:layout_constraintStart_toStartOf="@id/tv_check_in"
+            android:text="Selamat Pagi, Siang, Sore, Malam."/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_container_check_in_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_check_in_count_greet">
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_other_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/other_information"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/cv_container_check_in_list"
+            app:layout_constraintTop_toBottomOf="@id/cv_container_check_in_list"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_profile_add_ons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/student_profiler_card_container"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/student_profiler_card_container"
+            app:layout_constraintTop_toBottomOf="@id/tv_other_information" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -2,4 +2,7 @@
     <string name="app_name">Flavory</string>
     <string name="recipe_hub">Recipe Hub</string>
     <string name="welcome">Welcome to Flavory</string>
+    <string name="profile">Profil</string>
+    <string name="check_in">Check in</string>
+    <string name="other_information">Info lainnya</string>
 </resources>

@@ -3,4 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="warm_pink">#DCADAD</color>
+<!--    <color name="primary_700">#FF2489F4</color>-->
+    <color name="primary_700">#F2DEDF</color>
+    <color name="neutral_900">#FF0F172A</color>
+    <color name="soft_light_gray">#FF979797</color>
+    <color name="neutral_200">#FFE2E8F0</color>
+    <color name="neutral_600">#FF475569</color>
+    <color name="dark_gray">#FF5D5D5D</color>
+    <color name="primary_blue">#FF2489F4</color>
+
 </resources>
