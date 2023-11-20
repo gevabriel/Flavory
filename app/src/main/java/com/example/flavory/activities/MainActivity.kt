@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.search -> {
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.searchFragment)
+                    true
+                }
+
                 else -> false
             }
 
