@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-114dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.465"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.147"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/flavory" />
+
+        <TextView
+            android:id="@+id/text_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:fontFamily="@font/inter_bold"
+            android:paddingLeft="42dp"
+            android:paddingRight="50dp"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal|top"/>
+
+        <TextView
+            android:id="@+id/text_silakan"
+            android:layout_below="@+id/text_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_light"
+            android:text="Silakan masukkan akun Anda di sini"
+            android:textColor="@color/light_grey"
+            android:textSize="15sp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal|top"/>
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Email"
+            android:layout_below="@+id/text_silakan"
+            android:textColorHint="@color/light_grey"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:background="@drawable/input"
+            android:fontFamily="@font/inter_light"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="7.5dp"
+            android:paddingStart="52dp"
+            android:paddingEnd="80dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_silakan"
+            android:src="@drawable/ic_email"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="23.38dp"/>
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_below="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Kata Sandi"
+            android:textColorHint="@color/light_grey"
+            android:textSize="14sp"
+            android:background="@drawable/input"
+            android:fontFamily="@font/inter_light"
+            android:inputType="textPassword"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="7.5dp"
+            android:paddingStart="52dp"
+            android:paddingEnd="80dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_below="@id/input_email"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="23.38dp"
+            android:layout_marginRight="322dp"
+            android:src="@drawable/ic_lock" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_below="@id/input_email"
+            android:layout_marginLeft="318.25dp"
+            android:layout_marginTop="23.38dp"
+            android:layout_marginRight="51.25dp"
+            android:src="@drawable/ic_show" />
+
+        <TextView
+            android:id="@+id/text_lupa_sandi"
+            android:layout_below="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="38dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Lupa kata sandi?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="16dp"
+            android:gravity="right|top"/>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginBottom="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/red"
+            android:text="Login"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="19dp"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
